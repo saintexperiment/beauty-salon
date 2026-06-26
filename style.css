@@ -1,0 +1,116 @@
+/* Кастомные стили для сайта салона красоты */
+
+/* Шрифты */
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Cormorant Garamond', serif;
+}
+
+/* Плавная прокрутка */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Анимации */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeIn 0.6s ease-out;
+}
+
+/* Стили для формы */
+input:focus,
+textarea:focus,
+select:focus {
+    box-shadow: 0 0 0 3px rgba(190, 24, 93, 0.1);
+}
+
+/* Hover эффекты для карточек */
+.service-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Кастомный скроллбар */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #be125d;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #9e0d4d;
+}
+
+/* Анимация для hero секции */
+#home {
+    background: linear-gradient(135deg, #fdf2f8 0%, #fce7f3 50%, #fbcfe8 100%);
+}
+
+/* Стили для мобильного меню */
+#mobile-menu {
+    transition: all 0.3s ease;
+}
+
+/* Анимация кнопок */
+button {
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    transform: translateY(-2px);
+}
+
+/* Стили для карточек мастеров */
+.group:hover .group-hover\:scale-110 {
+    transform: scale(1.1);
+}
+
+/* Адаптивные стили */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.25rem;
+    }
+}
+
+/* Анимация при наведении на ссылки */
+a {
+    transition: color 0.3s ease;
+}
+
+/* Стили для placeholder */
+::placeholder {
+    color: #9ca3af;
+}
+
+/* Убираем outline при фокусе, но сохраняем доступность */
+*:focus {
+    outline: none;
+}
+
+*:focus-visible {
+    outline: 2px solid #be125d;
+    outline-offset: 2px;
+}
